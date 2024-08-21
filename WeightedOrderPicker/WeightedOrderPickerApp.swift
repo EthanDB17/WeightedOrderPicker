@@ -11,7 +11,7 @@ import SwiftUI
 struct WeightedOrderPickerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ItemListView(viewModel: ItemListViewModel())
         }
     }
 }

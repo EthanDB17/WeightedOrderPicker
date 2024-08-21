@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct UnderlinedTextFieldStyle: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct UnderlinedTextFieldStyle: TextFieldStyle {
+    
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(.vertical, 8)
+            .background(
+                VStack {
+                    Spacer()
+                    Color(UIColor.placeholderText)
+                        .frame(height: 2)
+                }
+            )
     }
+    
 }
 
 #Preview {
-    UnderlinedTextFieldStyle()
+    TextField("Placeholder...", text: .constant(""))
+        .textFieldStyle(UnderlinedTextFieldStyle())
 }
