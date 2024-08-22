@@ -8,6 +8,8 @@
 import Foundation
 import Observation
 
+/// ViewModel in charge of managing the list items added to be ordered
+/// - Description: Manages a list of ListItem elements that are entered in the UI. Also handles the presentation and acts as a delegate for the presenation popup.
 @Observable
 class ItemListViewModel {
     

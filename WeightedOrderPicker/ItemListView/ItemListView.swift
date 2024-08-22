@@ -14,8 +14,10 @@ struct ItemListView: View {
     var body: some View {
         ZStack {
             if viewModel.items.isEmpty {
-                emptyView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                if !viewModel.presentItemEntryView {
+                    emptyView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             } else {
                 NavigationStack {
                     VStack {
@@ -46,16 +48,18 @@ struct ItemListView: View {
     
     @ViewBuilder private func emptyView() -> some View {
         Button(action: {
-            viewModel.presentItemEntryView = true
+            withAnimation(.easeIn.speed(1.5)) {
+                viewModel.presentItemEntryView = true
+            }
         }, label: {
-            Text("+ Tap To Add Items")
+            ThemedText("+ Tap To Add Items", weight: .medium)
         })
     }
     
     @ViewBuilder private func elementList() -> some View {
         List {
             ForEach(viewModel.items, id: \.weight) { item in
-                Text("\(item.weight): \(item.name)")
+                ThemedText("\(item.weight): \(item.name)")
             }
         }
     }

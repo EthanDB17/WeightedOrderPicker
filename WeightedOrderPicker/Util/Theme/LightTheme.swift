@@ -12,11 +12,11 @@ struct LightTheme: ThemeElement {
     
     // MARK: - Backgrounds -
     
-    var primaryBackground: Color {
+    var primaryBackgroundColor: Color {
         return Color.white
     }
         
-    var secondaryBackground: Color {
+    var secondaryBackgroundColor: Color {
         return Color.white
     }
     
@@ -32,8 +32,13 @@ struct LightTheme: ThemeElement {
     
     // MARK: - Button Elements -
     
-    var primaryButtonBackground: Color {
-        return Color.blue.opacity(0.8)
+    var primaryButtonBackgroundColor: Color {
+//        return Color.blue.opacity(0.7)
+        return Color(hex: "4097da", opacity: 0.8)
+    }
+    var primaryDestructiveButtonBackgroundColor: Color {
+//        return Color.red.opacity(0.7)
+        return Color(hex: "e64c3c", opacity: 0.8)
     }
     var primaryButtonTextColor: Color {
         return Color.white

@@ -12,8 +12,8 @@ protocol ThemeElement {
     
     // MARK: - Backgrounds -
     
-    var primaryBackground: Color { get }
-    var secondaryBackground: Color { get }
+    var primaryBackgroundColor: Color { get }
+    var secondaryBackgroundColor: Color { get }
     var fullScreenBlurColor: Color { get }
     
     // MARK: - Text Elements -
@@ -22,6 +22,7 @@ protocol ThemeElement {
     
     // MARK: - Button Elements -
     
-    var primaryButtonBackground: Color { get }
+    var primaryButtonBackgroundColor: Color { get }
+    var primaryDestructiveButtonBackgroundColor: Color { get }
     var primaryButtonTextColor: Color { get }
 }

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+/// Text field style with an underline
 struct UnderlinedTextFieldStyle: TextFieldStyle {
     
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
+            .font(Theme.shared.primaryFont(forSize: 17))
             .padding(.vertical, 8)
             .background(
                 VStack {

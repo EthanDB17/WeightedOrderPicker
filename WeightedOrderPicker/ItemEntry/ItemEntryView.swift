@@ -16,38 +16,77 @@ struct ItemEntryView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    viewModel.dismiss()
+                    withAnimation(.easeOut.speed(1.5)) {
+                        viewModel.dismiss()
+                    }
                 }, label: {
                     Image(systemName: "x.circle")
                         .tint(Theme.shared.primaryFontColor)
+                        .font(Theme.shared.primaryFont(forSize: 17))
                 })
                 .background(Color.clear)
             }
             
-            Text("Enter Item Name")
-                .font(.title)
+            ThemedText("Enter Item Name", size: 24, weight: .semiBold, style: .title)
             
             HStack(alignment: .center) {
-                Text("\(viewModel.currentRank).")
+                ThemedText("\(viewModel.currentRank).")
                 TextField("Name...", text: $viewModel.name)
                     .textFieldStyle(UnderlinedTextFieldStyle())
             }
             
+            if DeviceType.shared.isIphone {
+                iPhoneButtonStack()
+            } else {
+                iPadButtonStack()
+            }
+        }
+        .padding(8)
+        .background(Theme.shared.primaryBackgroundColor)
+        .cornerRadius(8)
+    }
+    
+    @ViewBuilder private func iPhoneButtonStack() -> some View {
+        VStack {
             Button(action: {
                 viewModel.saveAndEnterNext()
             }, label: {
                 Text("Save and Continue")
+                    .frame(minWidth: 250)
             })
+            .buttonStyle(ThemedButtonStyle())
+            
+            Button(action: {
+                withAnimation(.easeOut.speed(1.5)) {
+                    viewModel.saveAndExit()
+                }
+            }, label: {
+                Text("Save and Exit")
+                    .frame(minWidth: 250)
+            })
+            .buttonStyle(ThemedButtonStyle())
+        }
+    }
+    
+    @ViewBuilder private func iPadButtonStack() -> some View {
+        HStack(spacing: 16) {
+            Button(action: {
+                viewModel.saveAndEnterNext()
+            }, label: {
+                Text("Save and Continue")
+                    .frame(minWidth: 250)
+            })
+            .buttonStyle(ThemedButtonStyle())
             
             Button(action: {
                 viewModel.saveAndExit()
             }, label: {
                 Text("Save and Exit")
+                    .frame(minWidth: 250)
             })
+            .buttonStyle(ThemedButtonStyle())
         }
-        .padding(8)
-        .background(Theme.shared.primaryBackground)
-        .cornerRadius(8)
+        
     }
 }
 
