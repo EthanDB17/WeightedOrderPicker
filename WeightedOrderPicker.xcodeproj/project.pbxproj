@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372ADDDF2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADDDE2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift */; };
+		372ADDE32C72F18E004BFFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372ADDE22C72F18E004BFFA8 /* Assets.xcassets */; };
+		372ADDE72C72F18E004BFFA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372ADDE62C72F18E004BFFA8 /* Preview Assets.xcassets */; };
+		372ADDF12C72F18F004BFFA8 /* WeightedOrderPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADDF02C72F18F004BFFA8 /* WeightedOrderPickerTests.swift */; };
+		372ADDFB2C72F18F004BFFA8 /* WeightedOrderPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADDFA2C72F18F004BFFA8 /* WeightedOrderPickerUITests.swift */; };
+		372ADDFD2C72F18F004BFFA8 /* WeightedOrderPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADDFC2C72F18F004BFFA8 /* WeightedOrderPickerUITestsLaunchTests.swift */; };
+		372ADE0B2C72F1D7004BFFA8 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADE0A2C72F1D7004BFFA8 /* ItemListView.swift */; };
+		372ADE0D2C72F1E0004BFFA8 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADE0C2C72F1E0004BFFA8 /* ItemListViewModel.swift */; };
+		372ADE132C72F6DC004BFFA8 /* ItemEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADE122C72F6DC004BFFA8 /* ItemEntryViewModel.swift */; };
+		372ADE152C72F9A2004BFFA8 /* ItemEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372ADE142C72F9A2004BFFA8 /* ItemEntryView.swift */; };
+		3797F9802C72FDAD00FF4423 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F97F2C72FDAD00FF4423 /* ListItem.swift */; };
+		3797F9842C764F8000FF4423 /* ThemeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9832C764F8000FF4423 /* ThemeElement.swift */; };
+		3797F9862C76508800FF4423 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9852C76508800FF4423 /* LightTheme.swift */; };
+		3797F9882C76520D00FF4423 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9872C76520D00FF4423 /* Theme.swift */; };
+		3797F98B2C7655D200FF4423 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F98A2C7655D200FF4423 /* Color+Extensions.swift */; };
+		3797F98D2C7658C100FF4423 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F98C2C7658C100FF4423 /* DeviceType.swift */; };
+		3797F9912C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9902C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift */; };
+		3797F9932C765C6300FF4423 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9922C765C6300FF4423 /* UIColor+Extensions.swift */; };
+		3797F9A82C76C32200FF4423 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A72C76C32200FF4423 /* Montserrat-ThinItalic.ttf */; };
+		3797F9A92C76C32200FF4423 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A02C76C32200FF4423 /* Montserrat-LightItalic.ttf */; };
+		3797F9AA2C76C32200FF4423 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9982C76C32200FF4423 /* Montserrat-Bold.ttf */; };
+		3797F9AB2C76C32200FF4423 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9992C76C32200FF4423 /* Montserrat-BoldItalic.ttf */; };
+		3797F9AC2C76C32200FF4423 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A12C76C32200FF4423 /* Montserrat-Medium.ttf */; };
+		3797F9AD2C76C32200FF4423 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9962C76C32200FF4423 /* Montserrat-Black.ttf */; };
+		3797F9AE2C76C32200FF4423 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A32C76C32200FF4423 /* Montserrat-Regular.ttf */; };
+		3797F9AF2C76C32200FF4423 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99D2C76C32200FF4423 /* Montserrat-ExtraLightItalic.ttf */; };
+		3797F9B02C76C32200FF4423 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99B2C76C32200FF4423 /* Montserrat-ExtraBoldItalic.ttf */; };
+		3797F9B12C76C32200FF4423 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99C2C76C32200FF4423 /* Montserrat-ExtraLight.ttf */; };
+		3797F9B22C76C32200FF4423 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A52C76C32200FF4423 /* Montserrat-SemiBoldItalic.ttf */; };
+		3797F9B32C76C32200FF4423 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9972C76C32200FF4423 /* Montserrat-BlackItalic.ttf */; };
+		3797F9B42C76C32200FF4423 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99E2C76C32200FF4423 /* Montserrat-Italic.ttf */; };
+		3797F9B52C76C32200FF4423 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A62C76C32200FF4423 /* Montserrat-Thin.ttf */; };
+		3797F9B62C76C32200FF4423 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A22C76C32200FF4423 /* Montserrat-MediumItalic.ttf */; };
+		3797F9B72C76C32200FF4423 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99A2C76C32200FF4423 /* Montserrat-ExtraBold.ttf */; };
+		3797F9B82C76C32200FF4423 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F99F2C76C32200FF4423 /* Montserrat-Light.ttf */; };
+		3797F9B92C76C32200FF4423 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A42C76C32200FF4423 /* Montserrat-SemiBold.ttf */; };
+		3797F9BD2C76C7EC00FF4423 /* ThemedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */; };
+		3797F9BF2C76CB7500FF4423 /* ThemedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9BE2C76CB7500FF4423 /* ThemedButtonStyle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372ADDED2C72F18F004BFFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372ADDD32C72F18D004BFFA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372ADDDA2C72F18D004BFFA8;
+			remoteInfo = WeightedOrderPicker;
+		};
+		372ADDF72C72F18F004BFFA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372ADDD32C72F18D004BFFA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372ADDDA2C72F18D004BFFA8;
+			remoteInfo = WeightedOrderPicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		372ADDDB2C72F18D004BFFA8 /* WeightedOrderPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightedOrderPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372ADDDE2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderPickerApp.swift; sourceTree = "<group>"; };
+		372ADDE22C72F18E004BFFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372ADDE42C72F18E004BFFA8 /* WeightedOrderPicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeightedOrderPicker.entitlements; sourceTree = "<group>"; };
+		372ADDE62C72F18E004BFFA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		372ADDEC2C72F18F004BFFA8 /* WeightedOrderPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightedOrderPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372ADDF02C72F18F004BFFA8 /* WeightedOrderPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderPickerTests.swift; sourceTree = "<group>"; };
+		372ADDF62C72F18F004BFFA8 /* WeightedOrderPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightedOrderPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372ADDFA2C72F18F004BFFA8 /* WeightedOrderPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderPickerUITests.swift; sourceTree = "<group>"; };
+		372ADDFC2C72F18F004BFFA8 /* WeightedOrderPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		372ADE0A2C72F1D7004BFFA8 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		372ADE0C2C72F1E0004BFFA8 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		372ADE122C72F6DC004BFFA8 /* ItemEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntryViewModel.swift; sourceTree = "<group>"; };
+		372ADE142C72F9A2004BFFA8 /* ItemEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntryView.swift; sourceTree = "<group>"; };
+		3797F97F2C72FDAD00FF4423 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		3797F9832C764F8000FF4423 /* ThemeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeElement.swift; sourceTree = "<group>"; };
+		3797F9852C76508800FF4423 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		3797F9872C76520D00FF4423 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3797F98A2C7655D200FF4423 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		3797F98C2C7658C100FF4423 /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		3797F9902C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextFieldStyle.swift; sourceTree = "<group>"; };
+		3797F9922C765C6300FF4423 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		3797F9962C76C32200FF4423 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		3797F9972C76C32200FF4423 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3797F9982C76C32200FF4423 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		3797F9992C76C32200FF4423 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3797F99A2C76C32200FF4423 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3797F99B2C76C32200FF4423 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		3797F99C2C76C32200FF4423 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3797F99D2C76C32200FF4423 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		3797F99E2C76C32200FF4423 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		3797F99F2C76C32200FF4423 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		3797F9A02C76C32200FF4423 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		3797F9A12C76C32200FF4423 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3797F9A22C76C32200FF4423 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		3797F9A32C76C32200FF4423 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		3797F9A42C76C32200FF4423 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		3797F9A52C76C32200FF4423 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		3797F9A62C76C32200FF4423 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		3797F9A72C76C32200FF4423 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3797F9BA2C76C34800FF4423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedText.swift; sourceTree = "<group>"; };
+		3797F9BE2C76CB7500FF4423 /* ThemedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButtonStyle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372ADDD82C72F18D004BFFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDE92C72F18F004BFFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDF32C72F18F004BFFA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372ADDD22C72F18D004BFFA8 = {
+			isa = PBXGroup;
+			children = (
+				372ADDDD2C72F18D004BFFA8 /* WeightedOrderPicker */,
+				372ADDEF2C72F18F004BFFA8 /* WeightedOrderPickerTests */,
+				372ADDF92C72F18F004BFFA8 /* WeightedOrderPickerUITests */,
+				372ADDDC2C72F18D004BFFA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		372ADDDC2C72F18D004BFFA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372ADDDB2C72F18D004BFFA8 /* WeightedOrderPicker.app */,
+				372ADDEC2C72F18F004BFFA8 /* WeightedOrderPickerTests.xctest */,
+				372ADDF62C72F18F004BFFA8 /* WeightedOrderPickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372ADDDD2C72F18D004BFFA8 /* WeightedOrderPicker */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9BA2C76C34800FF4423 /* Info.plist */,
+				372ADE112C72F6B4004BFFA8 /* ItemEntry */,
+				372ADE0E2C72F1F8004BFFA8 /* Models */,
+				372ADE092C72F1BA004BFFA8 /* ItemListView */,
+				3797F98E2C765A3E00FF4423 /* UI */,
+				3797F9812C764F5000FF4423 /* Util */,
+				3797F9892C7655BE00FF4423 /* Extensions */,
+				3797F9942C76C2F100FF4423 /* Resources */,
+				372ADDDE2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift */,
+				372ADDE42C72F18E004BFFA8 /* WeightedOrderPicker.entitlements */,
+				372ADDE52C72F18E004BFFA8 /* Preview Content */,
+			);
+			path = WeightedOrderPicker;
+			sourceTree = "<group>";
+		};
+		372ADDE52C72F18E004BFFA8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				372ADDE62C72F18E004BFFA8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		372ADDEF2C72F18F004BFFA8 /* WeightedOrderPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				372ADDF02C72F18F004BFFA8 /* WeightedOrderPickerTests.swift */,
+			);
+			path = WeightedOrderPickerTests;
+			sourceTree = "<group>";
+		};
+		372ADDF92C72F18F004BFFA8 /* WeightedOrderPickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372ADDFA2C72F18F004BFFA8 /* WeightedOrderPickerUITests.swift */,
+				372ADDFC2C72F18F004BFFA8 /* WeightedOrderPickerUITestsLaunchTests.swift */,
+			);
+			path = WeightedOrderPickerUITests;
+			sourceTree = "<group>";
+		};
+		372ADE092C72F1BA004BFFA8 /* ItemListView */ = {
+			isa = PBXGroup;
+			children = (
+				372ADE0A2C72F1D7004BFFA8 /* ItemListView.swift */,
+				372ADE0C2C72F1E0004BFFA8 /* ItemListViewModel.swift */,
+			);
+			path = ItemListView;
+			sourceTree = "<group>";
+		};
+		372ADE0E2C72F1F8004BFFA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3797F97F2C72FDAD00FF4423 /* ListItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		372ADE112C72F6B4004BFFA8 /* ItemEntry */ = {
+			isa = PBXGroup;
+			children = (
+				372ADE122C72F6DC004BFFA8 /* ItemEntryViewModel.swift */,
+				372ADE142C72F9A2004BFFA8 /* ItemEntryView.swift */,
+			);
+			path = ItemEntry;
+			sourceTree = "<group>";
+		};
+		3797F9812C764F5000FF4423 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9822C764F5900FF4423 /* Theme */,
+				3797F98C2C7658C100FF4423 /* DeviceType.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3797F9822C764F5900FF4423 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9832C764F8000FF4423 /* ThemeElement.swift */,
+				3797F9852C76508800FF4423 /* LightTheme.swift */,
+				3797F9872C76520D00FF4423 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		3797F9892C7655BE00FF4423 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3797F98A2C7655D200FF4423 /* Color+Extensions.swift */,
+				3797F9922C765C6300FF4423 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3797F98E2C765A3E00FF4423 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9BB2C76C69600FF4423 /* Elements */,
+				3797F98F2C765A4900FF4423 /* Styles */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3797F98F2C765A4900FF4423 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9902C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift */,
+				3797F9BE2C76CB7500FF4423 /* ThemedButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		3797F9942C76C2F100FF4423 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9952C76C2FF00FF4423 /* Fonts */,
+				372ADDE22C72F18E004BFFA8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3797F9952C76C2FF00FF4423 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9962C76C32200FF4423 /* Montserrat-Black.ttf */,
+				3797F9972C76C32200FF4423 /* Montserrat-BlackItalic.ttf */,
+				3797F9982C76C32200FF4423 /* Montserrat-Bold.ttf */,
+				3797F9992C76C32200FF4423 /* Montserrat-BoldItalic.ttf */,
+				3797F99A2C76C32200FF4423 /* Montserrat-ExtraBold.ttf */,
+				3797F99B2C76C32200FF4423 /* Montserrat-ExtraBoldItalic.ttf */,
+				3797F99C2C76C32200FF4423 /* Montserrat-ExtraLight.ttf */,
+				3797F99D2C76C32200FF4423 /* Montserrat-ExtraLightItalic.ttf */,
+				3797F99E2C76C32200FF4423 /* Montserrat-Italic.ttf */,
+				3797F99F2C76C32200FF4423 /* Montserrat-Light.ttf */,
+				3797F9A02C76C32200FF4423 /* Montserrat-LightItalic.ttf */,
+				3797F9A12C76C32200FF4423 /* Montserrat-Medium.ttf */,
+				3797F9A22C76C32200FF4423 /* Montserrat-MediumItalic.ttf */,
+				3797F9A32C76C32200FF4423 /* Montserrat-Regular.ttf */,
+				3797F9A42C76C32200FF4423 /* Montserrat-SemiBold.ttf */,
+				3797F9A52C76C32200FF4423 /* Montserrat-SemiBoldItalic.ttf */,
+				3797F9A62C76C32200FF4423 /* Montserrat-Thin.ttf */,
+				3797F9A72C76C32200FF4423 /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3797F9BB2C76C69600FF4423 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372ADDDA2C72F18D004BFFA8 /* WeightedOrderPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372ADE002C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPicker" */;
+			buildPhases = (
+				372ADDD72C72F18D004BFFA8 /* Sources */,
+				372ADDD82C72F18D004BFFA8 /* Frameworks */,
+				372ADDD92C72F18D004BFFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeightedOrderPicker;
+			productName = WeightedOrderPicker;
+			productReference = 372ADDDB2C72F18D004BFFA8 /* WeightedOrderPicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372ADDEB2C72F18F004BFFA8 /* WeightedOrderPickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372ADE032C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPickerTests" */;
+			buildPhases = (
+				372ADDE82C72F18F004BFFA8 /* Sources */,
+				372ADDE92C72F18F004BFFA8 /* Frameworks */,
+				372ADDEA2C72F18F004BFFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372ADDEE2C72F18F004BFFA8 /* PBXTargetDependency */,
+			);
+			name = WeightedOrderPickerTests;
+			productName = WeightedOrderPickerTests;
+			productReference = 372ADDEC2C72F18F004BFFA8 /* WeightedOrderPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		372ADDF52C72F18F004BFFA8 /* WeightedOrderPickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372ADE062C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPickerUITests" */;
+			buildPhases = (
+				372ADDF22C72F18F004BFFA8 /* Sources */,
+				372ADDF32C72F18F004BFFA8 /* Frameworks */,
+				372ADDF42C72F18F004BFFA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372ADDF82C72F18F004BFFA8 /* PBXTargetDependency */,
+			);
+			name = WeightedOrderPickerUITests;
+			productName = WeightedOrderPickerUITests;
+			productReference = 372ADDF62C72F18F004BFFA8 /* WeightedOrderPickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372ADDD32C72F18D004BFFA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					372ADDDA2C72F18D004BFFA8 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					372ADDEB2C72F18F004BFFA8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 372ADDDA2C72F18D004BFFA8;
+					};
+					372ADDF52C72F18F004BFFA8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 372ADDDA2C72F18D004BFFA8;
+					};
+				};
+			};
+			buildConfigurationList = 372ADDD62C72F18D004BFFA8 /* Build configuration list for PBXProject "WeightedOrderPicker" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372ADDD22C72F18D004BFFA8;
+			productRefGroup = 372ADDDC2C72F18D004BFFA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372ADDDA2C72F18D004BFFA8 /* WeightedOrderPicker */,
+				372ADDEB2C72F18F004BFFA8 /* WeightedOrderPickerTests */,
+				372ADDF52C72F18F004BFFA8 /* WeightedOrderPickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372ADDD92C72F18D004BFFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372ADDE72C72F18E004BFFA8 /* Preview Assets.xcassets in Resources */,
+				3797F9A82C76C32200FF4423 /* Montserrat-ThinItalic.ttf in Resources */,
+				3797F9A92C76C32200FF4423 /* Montserrat-LightItalic.ttf in Resources */,
+				3797F9AA2C76C32200FF4423 /* Montserrat-Bold.ttf in Resources */,
+				3797F9AB2C76C32200FF4423 /* Montserrat-BoldItalic.ttf in Resources */,
+				3797F9AC2C76C32200FF4423 /* Montserrat-Medium.ttf in Resources */,
+				3797F9AD2C76C32200FF4423 /* Montserrat-Black.ttf in Resources */,
+				3797F9AE2C76C32200FF4423 /* Montserrat-Regular.ttf in Resources */,
+				3797F9AF2C76C32200FF4423 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				3797F9B02C76C32200FF4423 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				3797F9B12C76C32200FF4423 /* Montserrat-ExtraLight.ttf in Resources */,
+				3797F9B22C76C32200FF4423 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				3797F9B32C76C32200FF4423 /* Montserrat-BlackItalic.ttf in Resources */,
+				3797F9B42C76C32200FF4423 /* Montserrat-Italic.ttf in Resources */,
+				3797F9B52C76C32200FF4423 /* Montserrat-Thin.ttf in Resources */,
+				3797F9B62C76C32200FF4423 /* Montserrat-MediumItalic.ttf in Resources */,
+				3797F9B72C76C32200FF4423 /* Montserrat-ExtraBold.ttf in Resources */,
+				3797F9B82C76C32200FF4423 /* Montserrat-Light.ttf in Resources */,
+				3797F9B92C76C32200FF4423 /* Montserrat-SemiBold.ttf in Resources */,
+				372ADDE32C72F18E004BFFA8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDEA2C72F18F004BFFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDF42C72F18F004BFFA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372ADDD72C72F18D004BFFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3797F9882C76520D00FF4423 /* Theme.swift in Sources */,
+				3797F9802C72FDAD00FF4423 /* ListItem.swift in Sources */,
+				372ADE132C72F6DC004BFFA8 /* ItemEntryViewModel.swift in Sources */,
+				3797F9932C765C6300FF4423 /* UIColor+Extensions.swift in Sources */,
+				372ADE0D2C72F1E0004BFFA8 /* ItemListViewModel.swift in Sources */,
+				372ADE0B2C72F1D7004BFFA8 /* ItemListView.swift in Sources */,
+				3797F9912C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift in Sources */,
+				3797F9BD2C76C7EC00FF4423 /* ThemedText.swift in Sources */,
+				3797F98B2C7655D200FF4423 /* Color+Extensions.swift in Sources */,
+				3797F9862C76508800FF4423 /* LightTheme.swift in Sources */,
+				3797F9BF2C76CB7500FF4423 /* ThemedButtonStyle.swift in Sources */,
+				372ADDDF2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift in Sources */,
+				3797F98D2C7658C100FF4423 /* DeviceType.swift in Sources */,
+				3797F9842C764F8000FF4423 /* ThemeElement.swift in Sources */,
+				372ADE152C72F9A2004BFFA8 /* ItemEntryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDE82C72F18F004BFFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372ADDF12C72F18F004BFFA8 /* WeightedOrderPickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372ADDF22C72F18F004BFFA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372ADDFD2C72F18F004BFFA8 /* WeightedOrderPickerUITestsLaunchTests.swift in Sources */,
+				372ADDFB2C72F18F004BFFA8 /* WeightedOrderPickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372ADDEE2C72F18F004BFFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372ADDDA2C72F18D004BFFA8 /* WeightedOrderPicker */;
+			targetProxy = 372ADDED2C72F18F004BFFA8 /* PBXContainerItemProxy */;
+		};
+		372ADDF82C72F18F004BFFA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372ADDDA2C72F18D004BFFA8 /* WeightedOrderPicker */;
+			targetProxy = 372ADDF72C72F18F004BFFA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		372ADDFE2C72F18F004BFFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		372ADDFF2C72F18F004BFFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		372ADE012C72F18F004BFFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeightedOrderPicker/WeightedOrderPicker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WeightedOrderPicker/Preview Content\"";
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeightedOrderPicker/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		372ADE022C72F18F004BFFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeightedOrderPicker/WeightedOrderPicker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WeightedOrderPicker/Preview Content\"";
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeightedOrderPicker/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		372ADE042C72F18F004BFFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeightedOrderPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeightedOrderPicker";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		372ADE052C72F18F004BFFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeightedOrderPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeightedOrderPicker";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		372ADE072C72F18F004BFFA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = WeightedOrderPicker;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		372ADE082C72F18F004BFFA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MWM578QRE5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.WeightedOrderPickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = WeightedOrderPicker;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372ADDD62C72F18D004BFFA8 /* Build configuration list for PBXProject "WeightedOrderPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372ADDFE2C72F18F004BFFA8 /* Debug */,
+				372ADDFF2C72F18F004BFFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372ADE002C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372ADE012C72F18F004BFFA8 /* Debug */,
+				372ADE022C72F18F004BFFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372ADE032C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372ADE042C72F18F004BFFA8 /* Debug */,
+				372ADE052C72F18F004BFFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372ADE062C72F18F004BFFA8 /* Build configuration list for PBXNativeTarget "WeightedOrderPickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372ADE072C72F18F004BFFA8 /* Debug */,
+				372ADE082C72F18F004BFFA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372ADDD32C72F18D004BFFA8 /* Project object */;
+}
