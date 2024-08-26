@@ -17,13 +17,14 @@ struct ThemedButtonStyle: ButtonStyle {
     }
     
     var actionType: ActionType = .standard
+    var horizontalPadding: CGFloat = 8
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(Theme.shared.primaryFont(forSize: 17, weight: .medium))
             .foregroundColor(Theme.shared.primaryButtonTextColor)
             .padding(.vertical, 8)
-            .padding(.horizontal, 8)
+            .padding(.horizontal, horizontalPadding)
             .background(colorForActionType())
             .clipShape(RoundedRectangle(cornerRadius: 8))
     }

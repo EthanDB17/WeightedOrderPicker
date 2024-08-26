@@ -45,6 +45,10 @@
 		3797F9B92C76C32200FF4423 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797F9A42C76C32200FF4423 /* Montserrat-SemiBold.ttf */; };
 		3797F9BD2C76C7EC00FF4423 /* ThemedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */; };
 		3797F9BF2C76CB7500FF4423 /* ThemedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797F9BE2C76CB7500FF4423 /* ThemedButtonStyle.swift */; };
+		37CA60782C7BE2B00015B272 /* WeightedOrderGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA60772C7BE2B00015B272 /* WeightedOrderGenerator.swift */; };
+		37CA607B2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607A2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift */; };
+		37CA607D2C7C36F30015B272 /* OrderedItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607C2C7C36F30015B272 /* OrderedItemListViewModel.swift */; };
+		37CA607F2C7C39EA0015B272 /* OrderedItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607E2C7C39EA0015B272 /* OrderedItemListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		3797F9BA2C76C34800FF4423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedText.swift; sourceTree = "<group>"; };
 		3797F9BE2C76CB7500FF4423 /* ThemedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButtonStyle.swift; sourceTree = "<group>"; };
+		37CA60772C7BE2B00015B272 /* WeightedOrderGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderGenerator.swift; sourceTree = "<group>"; };
+		37CA607A2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderGeneratorTests.swift; sourceTree = "<group>"; };
+		37CA607C2C7C36F30015B272 /* OrderedItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedItemListViewModel.swift; sourceTree = "<group>"; };
+		37CA607E2C7C39EA0015B272 /* OrderedItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedItemListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 		372ADDDD2C72F18D004BFFA8 /* WeightedOrderPicker */ = {
 			isa = PBXGroup;
 			children = (
+				37CA60762C7BE2970015B272 /* OrderGeneration */,
 				3797F9BA2C76C34800FF4423 /* Info.plist */,
 				372ADE112C72F6B4004BFFA8 /* ItemEntry */,
 				372ADE0E2C72F1F8004BFFA8 /* Models */,
@@ -184,6 +193,7 @@
 		372ADDEF2C72F18F004BFFA8 /* WeightedOrderPickerTests */ = {
 			isa = PBXGroup;
 			children = (
+				37CA60792C7BE9CA0015B272 /* OrderGenerationTests */,
 				372ADDF02C72F18F004BFFA8 /* WeightedOrderPickerTests.swift */,
 			);
 			path = WeightedOrderPickerTests;
@@ -203,6 +213,8 @@
 			children = (
 				372ADE0A2C72F1D7004BFFA8 /* ItemListView.swift */,
 				372ADE0C2C72F1E0004BFFA8 /* ItemListViewModel.swift */,
+				37CA607E2C7C39EA0015B272 /* OrderedItemListView.swift */,
+				37CA607C2C7C36F30015B272 /* OrderedItemListViewModel.swift */,
 			);
 			path = ItemListView;
 			sourceTree = "<group>";
@@ -310,6 +322,22 @@
 				3797F9BC2C76C7EC00FF4423 /* ThemedText.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		37CA60762C7BE2970015B272 /* OrderGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				37CA60772C7BE2B00015B272 /* WeightedOrderGenerator.swift */,
+			);
+			path = OrderGeneration;
+			sourceTree = "<group>";
+		};
+		37CA60792C7BE9CA0015B272 /* OrderGenerationTests */ = {
+			isa = PBXGroup;
+			children = (
+				37CA607A2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift */,
+			);
+			path = OrderGenerationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,10 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CA607D2C7C36F30015B272 /* OrderedItemListViewModel.swift in Sources */,
 				3797F9882C76520D00FF4423 /* Theme.swift in Sources */,
 				3797F9802C72FDAD00FF4423 /* ListItem.swift in Sources */,
 				372ADE132C72F6DC004BFFA8 /* ItemEntryViewModel.swift in Sources */,
 				3797F9932C765C6300FF4423 /* UIColor+Extensions.swift in Sources */,
+				37CA607F2C7C39EA0015B272 /* OrderedItemListView.swift in Sources */,
 				372ADE0D2C72F1E0004BFFA8 /* ItemListViewModel.swift in Sources */,
 				372ADE0B2C72F1D7004BFFA8 /* ItemListView.swift in Sources */,
 				3797F9912C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift in Sources */,
@@ -471,6 +501,7 @@
 				3797F98B2C7655D200FF4423 /* Color+Extensions.swift in Sources */,
 				3797F9862C76508800FF4423 /* LightTheme.swift in Sources */,
 				3797F9BF2C76CB7500FF4423 /* ThemedButtonStyle.swift in Sources */,
+				37CA60782C7BE2B00015B272 /* WeightedOrderGenerator.swift in Sources */,
 				372ADDDF2C72F18D004BFFA8 /* WeightedOrderPickerApp.swift in Sources */,
 				3797F98D2C7658C100FF4423 /* DeviceType.swift in Sources */,
 				3797F9842C764F8000FF4423 /* ThemeElement.swift in Sources */,
@@ -483,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372ADDF12C72F18F004BFFA8 /* WeightedOrderPickerTests.swift in Sources */,
+				37CA607B2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +691,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -699,7 +731,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};

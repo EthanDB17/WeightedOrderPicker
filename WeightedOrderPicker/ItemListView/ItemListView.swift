@@ -22,11 +22,11 @@ struct ItemListView: View {
                 NavigationStack {
                     VStack {
                         elementList()
-                        Button(action: {
-                            // generate random order
-                        }, label: {
-                            Text("Generate Order")
-                        })
+                        NavigationLink("Generate Weighted Order", value: viewModel.items)
+                            .buttonStyle(ThemedButtonStyle(horizontalPadding: 16))
+                    }
+                    .navigationDestination(for: [ListItem].self) { items in
+                        OrderedItemListView(viewModel: OrderedItemListViewModel(startingList: items))
                     }
                 }
             }
@@ -62,6 +62,7 @@ struct ItemListView: View {
                 ThemedText("\(item.weight): \(item.name)")
             }
         }
+        .listStyle(.plain)
     }
 }
 

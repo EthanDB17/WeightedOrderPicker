@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 /// Singleton object used to access device information
+@MainActor
 struct DeviceType {
     
     static let shared = DeviceType()
