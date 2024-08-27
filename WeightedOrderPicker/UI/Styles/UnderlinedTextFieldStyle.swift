@@ -12,7 +12,7 @@ struct UnderlinedTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         VStack(spacing: 0) {
             configuration
-                .font(Theme.shared.primaryFont(forSize: 17))
+                .font(Theme.current.primaryFont(forSize: 17))
                 .padding(.vertical, 8)
             
             Color(UIColor.placeholderText)

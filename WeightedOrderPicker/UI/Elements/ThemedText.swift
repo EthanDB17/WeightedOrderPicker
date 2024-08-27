@@ -22,7 +22,7 @@ struct ThemedText: View {
     
     var body: some View {
         Text(text)
-            .font(Theme.shared.primaryFont(forSize: size, weight: self.weight, textStyle: self.style))
+            .font(Theme.current.primaryFont(forSize: size, weight: self.weight, textStyle: self.style))
     }
 }
 

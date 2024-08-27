@@ -13,46 +13,80 @@ struct ItemListView: View {
     
     var body: some View {
         ZStack {
-            if viewModel.items.isEmpty {
-                if !viewModel.presentItemEntryView {
-                    emptyView()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
-            } else {
-                NavigationStack {
-                    VStack {
-                        elementList()
-                        NavigationLink("Generate Weighted Order", value: viewModel.items)
-                            .buttonStyle(ThemedButtonStyle(horizontalPadding: 16))
+            VStack {
+                headerBar()
+                
+                if viewModel.items.isEmpty {
+                    if viewModel.popupViewType == nil {
+                        emptyView()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else {
+                        Spacer()
+                            .frame(maxHeight: .infinity)
                     }
-                    .navigationDestination(for: [ListItem].self) { items in
-                        OrderedItemListView(viewModel: OrderedItemListViewModel(startingList: items))
+                } else {
+                    NavigationStack {
+                        VStack {
+                            elementList()
+                            NavigationLink("Generate Weighted Order", value: viewModel.items)
+                                .buttonStyle(ThemedButtonStyle(horizontalPadding: 16))
+                        }
+                        .blur(radius: viewModel.popupViewType != nil ? 1 : 0)
+                        .navigationDestination(for: [ListItem].self) { items in
+                            OrderedItemListView(viewModel: OrderedItemListViewModel(startingList: items))
+                        }
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Theme.current.primaryBackgroundColor)
             
-            if viewModel.presentItemEntryView {
-                ZStack {
-                    Theme.shared.fullScreenBlurColor
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .edgesIgnoringSafeArea(.all)
-                        .blur(radius: 20)
-                    ItemEntryView(viewModel: ItemEntryViewModel(currentRank: viewModel.items.count + 1, delegate: viewModel))
-                        .padding(.horizontal, 8)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            if let popuptype = viewModel.popupViewType {
+                PopupPresenterView(popupType: popuptype)
             }
         }
-        
+    }
+    
+    @ViewBuilder private func headerBar() -> some View {
+        HStack {
+            Button(action: {
+                // TODO: Show info popup
+            }, label: {
+                Image(systemName: "info.circle")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .tint(Theme.current.accentElementFontColor)
+                    .padding(.horizontal, 8)
+            })
+            
+            ThemedText("Initial Ordered List", size: 24, weight: .bold, style: .title)
+                .frame(maxWidth: .infinity)
+                .foregroundStyle(Theme.current.accentElementFontColor)
+            
+            Button(action: {
+                // TODO: Show alert sheet
+            }, label: {
+                Image(systemName: "ellipsis")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                    .tint(Theme.current.accentElementFontColor)
+                    .padding(.horizontal, 8)
+                    .rotationEffect(.degrees(90))
+            })
+        }
+        .frame(maxWidth: .infinity, minHeight: 40)
+        .background(Theme.current.primaryAccentColor)
     }
     
     @ViewBuilder private func emptyView() -> some View {
         Button(action: {
             withAnimation(.easeIn.speed(1.5)) {
-                viewModel.presentItemEntryView = true
+                viewModel.popupViewType = .itemEntryView(viewModel: .init(currentRank: viewModel.items.count + 1, delegate: viewModel))
             }
         }, label: {
-            ThemedText("+ Tap To Add Items", weight: .medium)
+            ThemedText("+ Tap To Add Items", size: 20, weight: .semiBold)
+                .foregroundStyle(Theme.current.primaryAccentColor)
         })
     }
     

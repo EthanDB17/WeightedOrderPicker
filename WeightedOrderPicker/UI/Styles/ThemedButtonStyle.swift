@@ -21,8 +21,8 @@ struct ThemedButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(Theme.shared.primaryFont(forSize: 17, weight: .medium))
-            .foregroundColor(Theme.shared.primaryButtonTextColor)
+            .font(Theme.current.primaryFont(forSize: 17, weight: .medium))
+            .foregroundColor(Theme.current.accentElementFontColor)
             .padding(.vertical, 8)
             .padding(.horizontal, horizontalPadding)
             .background(colorForActionType())
@@ -32,9 +32,9 @@ struct ThemedButtonStyle: ButtonStyle {
     private func colorForActionType() -> Color {
         switch self.actionType {
         case .standard:
-            return Theme.shared.primaryButtonBackgroundColor
+            return Theme.current.primaryAccentColor
         case .destructive:
-            return Theme.shared.primaryDestructiveButtonBackgroundColor
+            return Theme.current.destructiveAccentColor
         }
     }
 }

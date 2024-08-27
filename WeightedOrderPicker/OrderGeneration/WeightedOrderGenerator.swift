@@ -22,7 +22,7 @@ struct WeightedOrderGenerator: AnyWeightedOrderGenerator {
         let itemCount = list.count
         var weightedList: [String] = []
         
-        var weightCounter = itemCount + 1
+        let weightCounter = itemCount + 1
         for item in list {
             let numEntries = weightCounter - item.weight
             let itemEntries = [String](repeating: item.name, count: numEntries)
@@ -51,6 +51,7 @@ struct WeightedOrderGenerator: AnyWeightedOrderGenerator {
             }
             
             workingList.removeAll(where: { $0 == randomSelection })
+            workingList = workingList.shuffled()
         }
         
         return orderedList

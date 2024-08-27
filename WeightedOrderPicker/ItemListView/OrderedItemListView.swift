@@ -34,6 +34,7 @@ struct OrderedItemListView: View {
             }
         }
         .listStyle(.plain)
+        .animation(.smooth, value: viewModel.orderedList)
     }
 }
 

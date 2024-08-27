@@ -49,6 +49,8 @@
 		37CA607B2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607A2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift */; };
 		37CA607D2C7C36F30015B272 /* OrderedItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607C2C7C36F30015B272 /* OrderedItemListViewModel.swift */; };
 		37CA607F2C7C39EA0015B272 /* OrderedItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA607E2C7C39EA0015B272 /* OrderedItemListView.swift */; };
+		37CA60812C7D7B410015B272 /* PopupPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA60802C7D7B410015B272 /* PopupPresenterView.swift */; };
+		37CA60832C7D7C050015B272 /* PopupViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA60822C7D7C050015B272 /* PopupViewType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		37CA607A2C7BE9E60015B272 /* WeightedOrderGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedOrderGeneratorTests.swift; sourceTree = "<group>"; };
 		37CA607C2C7C36F30015B272 /* OrderedItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedItemListViewModel.swift; sourceTree = "<group>"; };
 		37CA607E2C7C39EA0015B272 /* OrderedItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedItemListView.swift; sourceTree = "<group>"; };
+		37CA60802C7D7B410015B272 /* PopupPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPresenterView.swift; sourceTree = "<group>"; };
+		37CA60822C7D7C050015B272 /* PopupViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 			children = (
 				3797F9822C764F5900FF4423 /* Theme */,
 				3797F98C2C7658C100FF4423 /* DeviceType.swift */,
+				37CA60822C7D7C050015B272 /* PopupViewType.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			children = (
 				3797F9BB2C76C69600FF4423 /* Elements */,
 				3797F98F2C765A4900FF4423 /* Styles */,
+				37CA60802C7D7B410015B272 /* PopupPresenterView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37CA607D2C7C36F30015B272 /* OrderedItemListViewModel.swift in Sources */,
+				37CA60812C7D7B410015B272 /* PopupPresenterView.swift in Sources */,
 				3797F9882C76520D00FF4423 /* Theme.swift in Sources */,
 				3797F9802C72FDAD00FF4423 /* ListItem.swift in Sources */,
 				372ADE132C72F6DC004BFFA8 /* ItemEntryViewModel.swift in Sources */,
@@ -498,6 +505,7 @@
 				372ADE0B2C72F1D7004BFFA8 /* ItemListView.swift in Sources */,
 				3797F9912C765A5D00FF4423 /* UnderlinedTextFieldStyle.swift in Sources */,
 				3797F9BD2C76C7EC00FF4423 /* ThemedText.swift in Sources */,
+				37CA60832C7D7C050015B272 /* PopupViewType.swift in Sources */,
 				3797F98B2C7655D200FF4423 /* Color+Extensions.swift in Sources */,
 				3797F9862C76508800FF4423 /* LightTheme.swift in Sources */,
 				3797F9BF2C76CB7500FF4423 /* ThemedButtonStyle.swift in Sources */,

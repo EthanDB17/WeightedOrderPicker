@@ -10,6 +10,11 @@ import SwiftUI
 
 protocol ThemeElement {
     
+    // MARK: - Accents -
+    
+    var primaryAccentColor: Color { get }
+    var destructiveAccentColor: Color { get }
+    
     // MARK: - Backgrounds -
     
     var primaryBackgroundColor: Color { get }
@@ -19,10 +24,5 @@ protocol ThemeElement {
     // MARK: - Text Elements -
     
     var primaryFontColor: Color { get }
-    
-    // MARK: - Button Elements -
-    
-    var primaryButtonBackgroundColor: Color { get }
-    var primaryDestructiveButtonBackgroundColor: Color { get }
-    var primaryButtonTextColor: Color { get }
+    var accentElementFontColor: Color { get }
 }

@@ -12,7 +12,7 @@ import UIKit
 /// Singleton element containing application theme colors and fonts
 struct Theme: ThemeElement {
     
-    static let shared = Theme()
+    static let current = Theme()
     let lightTheme = LightTheme()
     // TODO: replace this when a dark theme element is created
     let darkTheme = LightTheme()
@@ -24,6 +24,16 @@ struct Theme: ThemeElement {
         case .dark: return self.darkTheme
         default: return self.lightTheme
         }
+    }
+    
+    // MARK: - Accents -
+    
+    var primaryAccentColor: Color {
+        return currentTheme.primaryAccentColor
+    }
+    
+    var destructiveAccentColor: Color {
+        return currentTheme.destructiveAccentColor
     }
     
     // MARK: - Backgrounds -
@@ -44,16 +54,8 @@ struct Theme: ThemeElement {
         return currentTheme.primaryFontColor
     }
     
-    // MARK: - Button Elements -
-    
-    var primaryButtonBackgroundColor: Color {
-        return currentTheme.primaryButtonBackgroundColor
-    }
-    var primaryDestructiveButtonBackgroundColor: Color {
-        return currentTheme.primaryDestructiveButtonBackgroundColor
-    }
-    var primaryButtonTextColor: Color {
-        return currentTheme.primaryButtonTextColor
+    var accentElementFontColor: Color {
+        return currentTheme.accentElementFontColor
     }
     
     // MARK: - Fonts -

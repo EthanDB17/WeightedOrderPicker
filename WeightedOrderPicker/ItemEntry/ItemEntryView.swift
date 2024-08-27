@@ -21,8 +21,8 @@ struct ItemEntryView: View {
                     }
                 }, label: {
                     Image(systemName: "x.circle")
-                        .tint(Theme.shared.primaryFontColor)
-                        .font(Theme.shared.primaryFont(forSize: 17))
+                        .tint(Theme.current.primaryFontColor)
+                        .font(Theme.current.primaryFont(forSize: 17))
                 })
                 .background(Color.clear)
             }
@@ -42,7 +42,7 @@ struct ItemEntryView: View {
             }
         }
         .padding(8)
-        .background(Theme.shared.primaryBackgroundColor)
+        .background(Theme.current.primaryBackgroundColor)
         .cornerRadius(8)
     }
     

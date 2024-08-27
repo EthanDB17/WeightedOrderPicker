@@ -10,6 +10,16 @@ import SwiftUI
 
 struct LightTheme: ThemeElement {
     
+    // MARK: - Accents -
+    
+    var primaryAccentColor: Color {
+        return Color(hex: "4097da", opacity: 0.8)
+    }
+    
+    var destructiveAccentColor: Color {
+        return Color(hex: "e64c3c", opacity: 0.8)
+    }
+    
     // MARK: - Backgrounds -
     
     var primaryBackgroundColor: Color {
@@ -21,7 +31,7 @@ struct LightTheme: ThemeElement {
     }
     
     var fullScreenBlurColor: Color {
-        return Color(hex: "ebeef0", opacity: 0.5)
+        return Color(hex: "606c7a", opacity: 0.7)
     }
     
     // MARK: - Text Elements -
@@ -30,17 +40,7 @@ struct LightTheme: ThemeElement {
         return Color(UIColor.label)
     }
     
-    // MARK: - Button Elements -
-    
-    var primaryButtonBackgroundColor: Color {
-//        return Color.blue.opacity(0.7)
-        return Color(hex: "4097da", opacity: 0.8)
-    }
-    var primaryDestructiveButtonBackgroundColor: Color {
-//        return Color.red.opacity(0.7)
-        return Color(hex: "e64c3c", opacity: 0.8)
-    }
-    var primaryButtonTextColor: Color {
+    var accentElementFontColor: Color {
         return Color.white
     }
 }

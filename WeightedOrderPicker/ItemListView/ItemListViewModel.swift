@@ -16,7 +16,7 @@ class ItemListViewModel {
     // MARK: - Properties -
     
     var items: [ListItem] = []
-    var presentItemEntryView: Bool = false
+    var popupViewType: PopupViewType?
     
     init() {
     }
@@ -35,7 +35,7 @@ class ItemListViewModel {
 
 extension ItemListViewModel: ItemEntryDelegate {
     func dismiss() {
-        self.presentItemEntryView = false
+        self.popupViewType = nil
     }
     
     func itemEntered(_ name: String) {
