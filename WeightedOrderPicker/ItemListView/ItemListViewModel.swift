@@ -7,6 +7,7 @@
 
 import Foundation
 import Observation
+import Combine
 
 /// ViewModel in charge of managing the list items added to be ordered
 /// - Description: Manages a list of ListItem elements that are entered in the UI. Also handles the presentation and acts as a delegate for the presenation popup.
@@ -17,6 +18,8 @@ class ItemListViewModel {
     
     var items: [ListItem] = []
     var popupViewType: PopupViewType?
+    
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
     }
@@ -29,20 +32,22 @@ class ItemListViewModel {
         let itemWeight = items.count + 1
         items.append(.init(name: name, weight: itemWeight))
     }
-}
-
-// MARK: - ItemEntryDelegate -
-
-extension ItemListViewModel: ItemEntryDelegate {
-    func dismiss() {
-        self.popupViewType = nil
-    }
     
-    func itemEntered(_ name: String) {
-        self.addItem(name)
-    }
-    
-    func getNextItemRank() -> Int {
-        return items.count + 1
+    @MainActor
+    func presentItemEntryPopup() {
+        let itemEntryVM = ItemEntryViewModel(currentRank: items.count + 1)
+        itemEntryVM.nameSaved
+            .sink { [weak self] name in
+                guard let self else { return }
+                self.items.append(.init(name: name, weight: self.items.count + 1))
+            }
+            .store(in: &cancellables)
+        itemEntryVM.dismissView
+            .sink { [weak self] in
+                self?.popupViewType = nil
+            }
+            .store(in: &cancellables)
+        
+        self.popupViewType = .itemEntryView(viewModel: itemEntryVM)
     }
 }

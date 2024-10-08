@@ -31,5 +31,5 @@ struct PopupPresenterView: View {
 }
 
 #Preview {
-    PopupPresenterView(popupType: .itemEntryView(viewModel: ItemEntryViewModel(currentRank: 1, delegate: nil)))
+    PopupPresenterView(popupType: .itemEntryView(viewModel: ItemEntryViewModel(currentRank: 1)))
 }

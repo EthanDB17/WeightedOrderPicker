@@ -43,6 +43,7 @@ struct ItemListView: View {
             
             if let popuptype = viewModel.popupViewType {
                 PopupPresenterView(popupType: popuptype)
+                    .transition(.opacity)
             }
         }
     }
@@ -82,11 +83,12 @@ struct ItemListView: View {
     @ViewBuilder private func emptyView() -> some View {
         Button(action: {
             withAnimation(.easeIn.speed(1.5)) {
-                viewModel.popupViewType = .itemEntryView(viewModel: .init(currentRank: viewModel.items.count + 1, delegate: viewModel))
+                viewModel.presentItemEntryPopup()
             }
         }, label: {
             ThemedText("+ Tap To Add Items", size: 20, weight: .semiBold)
                 .foregroundStyle(Theme.current.primaryAccentColor)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         })
     }
     

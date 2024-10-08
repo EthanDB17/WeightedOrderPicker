@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ItemEntryView: View {
     
+    @FocusState private var focused: Bool
     @State var viewModel: ItemEntryViewModel
     
     var body: some View {
@@ -32,7 +33,14 @@ struct ItemEntryView: View {
             HStack(alignment: .center) {
                 ThemedText("\(viewModel.currentRank).")
                 TextField("Name...", text: $viewModel.name)
+                    .submitLabel(.next)
+                    .focused($focused)
                     .textFieldStyle(UnderlinedTextFieldStyle())
+                    .onSubmit {
+                        focused = true
+                        viewModel.saveAndEnterNext()
+                    }
+                    
             }
             
             if DeviceType.shared.isIphone {
@@ -44,12 +52,19 @@ struct ItemEntryView: View {
         .padding(8)
         .background(Theme.current.primaryBackgroundColor)
         .cornerRadius(8)
+        .onAppear {
+            focused = true
+        }
+        .onTapGesture {
+            focused = false
+        }
     }
     
     @ViewBuilder private func iPhoneButtonStack() -> some View {
         VStack {
             Button(action: {
                 viewModel.saveAndEnterNext()
+                focused = true
             }, label: {
                 Text("Save and Continue")
                     .frame(minWidth: 250)
@@ -72,6 +87,7 @@ struct ItemEntryView: View {
         HStack(spacing: 16) {
             Button(action: {
                 viewModel.saveAndEnterNext()
+                focused = true
             }, label: {
                 Text("Save and Continue")
                     .frame(minWidth: 250)
@@ -91,5 +107,5 @@ struct ItemEntryView: View {
 }
 
 #Preview {
-    ItemEntryView(viewModel: ItemEntryViewModel(currentRank: 1, delegate: nil))
+    ItemEntryView(viewModel: ItemEntryViewModel(currentRank: 1))
 }
