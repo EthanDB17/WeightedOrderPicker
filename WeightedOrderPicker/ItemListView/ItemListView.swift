@@ -10,15 +10,19 @@ import SwiftUI
 struct ItemListView: View {
     
     @State var viewModel: ItemListViewModel
+    @Namespace private var entryListAnimation
+    
+    let itemEntryId = "ItemEntryId"
     
     var body: some View {
-        ZStack {
-            VStack {
-                headerBar()
-                
+        VStack(spacing: 0) {
+             headerBar()
+             
+             ZStack {
                 if viewModel.items.isEmpty {
                     if viewModel.popupViewType == nil {
                         emptyView()
+                            .matchedGeometryEffect(id: itemEntryId, in: entryListAnimation)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     } else {
                         Spacer()
@@ -28,24 +32,32 @@ struct ItemListView: View {
                     NavigationStack {
                         VStack {
                             elementList()
-                            NavigationLink("Generate Weighted Order", value: viewModel.items)
-                                .buttonStyle(ThemedButtonStyle(horizontalPadding: 16))
+                                .frame(maxHeight: .infinity)
+                                .transition(.slide.animation(.easeInOut))
+                            VStack {
+                                NavigationLink("Generate Weighted Order", value: viewModel.items)
+                                    .buttonStyle(ThemedButtonStyle(horizontalPadding: 16))
+                            }
+                            
                         }
                         .blur(radius: viewModel.popupViewType != nil ? 1 : 0)
                         .navigationDestination(for: [ListItem].self) { items in
                             OrderedItemListView(viewModel: OrderedItemListViewModel(startingList: items))
                         }
+                        .frame(maxHeight: .infinity)
                     }
+                    .animation(.bouncy, value: viewModel.items)
                 }
+                 
+                 if let popuptype = viewModel.popupViewType {
+                     PopupPresenterView(popupType: popuptype)
+                         .matchedGeometryEffect(id: itemEntryId, in: entryListAnimation)
+                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Theme.current.primaryBackgroundColor)
-            
-            if let popuptype = viewModel.popupViewType {
-                PopupPresenterView(popupType: popuptype)
-                    .transition(.opacity)
-            }
         }
+        .animation(.easeInOut, value: viewModel.popupViewType)
     }
     
     @ViewBuilder private func headerBar() -> some View {
@@ -82,9 +94,7 @@ struct ItemListView: View {
     
     @ViewBuilder private func emptyView() -> some View {
         Button(action: {
-            withAnimation(.easeIn.speed(1.5)) {
-                viewModel.presentItemEntryPopup()
-            }
+            viewModel.presentItemEntryPopup()
         }, label: {
             ThemedText("+ Tap To Add Items", size: 20, weight: .semiBold)
                 .foregroundStyle(Theme.current.primaryAccentColor)
@@ -93,12 +103,16 @@ struct ItemListView: View {
     }
     
     @ViewBuilder private func elementList() -> some View {
-        List {
+        VStack(alignment: .leading, spacing: 8) {
             ForEach(viewModel.items, id: \.weight) { item in
                 ThemedText("\(item.weight): \(item.name)")
+                    .frame(height: 30)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .transition(.slide.animation(.easeInOut))
             }
+            Spacer()
         }
-        .listStyle(.plain)
+        .padding()
     }
 }
 
